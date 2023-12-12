@@ -10,79 +10,230 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .container {
+    display: grid;
     position: relative;
     width: 100%;
     max-width: 210mm;
     min-height: 297mm;
     background: #fff;
-}
-
-.top-part {
-    display: flex;
-    justify-content: space-between;
-    gap: 10%;
-    padding: 40px;
-    background-color: #383434;
-    color: white;
-}
-
-.main-part {
-    display: grid;
+    margin: 50px;
     grid-template-columns: 2fr 3fr;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.1);
 }
 
-.main-left {
-    padding: 40px;
-    background-color: #c0bcbc;
-}
-
-.main-right {
+.container .left-part {
+    position: relative;
+    background-color: #383434;
     padding: 40px;
 }
 
-.photo {
-    border-radius: 50%;
+.container .right-part {
+    position: relative;
+    background: #fff;
+    padding: 40px;
 }
 
-.name {
-    text-transform: uppercase;
-}
-
-
-.section {
+.profileText {
+    position: relative;
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-}
-
-.section-label {
-    margin: 0;
-    padding-bottom: 0.2em;
-    text-transform: uppercase;
-    border-bottom: 2px solid black;
-}
-
-.small-label {
-    color: #d4533b;
-    font-style: italic;
-}
-
-.contact-item {
-    display: flex;
     align-items: center;
-    gap: 0.5em;
-    padding: 0.5em 0.5em 0.5em 0;
 }
 
-#downloadCV {
+.profileText .imgBox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileText .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2 {
+    color: #fff;
+    font-size: 1.5em;
     margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
 }
 
-.contact-item a {
-    color: #000000;
-    font-style: normal;
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo {
+    padding-top: 40px;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contactInfo ul {
+    position: relative;
+}
+
+.contactInfo ul li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #d4533b;
+}
+
+.contactInfo ul li .text {
+    color: #fff;
+    font-weight: 300;
+    font-style: none;
     text-decoration: none;
+}
+
+.contactInfo ul li a:hover {
+    background-color: #d4533b;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.title2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(56, 52, 52, 0.2);
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+/* .about.experience .box {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+} */
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: #383434;
+    font-size: 16px;
+
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+
+}
+
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #e68675;
+}
+
+.interests ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+.interests ul li {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    list-style: none;
+    font-weight: 500;
+}
+
+.interests ul li .icon {
+    color: #d4533b;
+}
+
+/* .interests ul li .text {
+
+} */
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interests ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box .year_company {
+        margin-bottom: 5px;
+    }
+    .interests ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
