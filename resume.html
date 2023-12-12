@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krzysztof Babicki CV</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="resume" class="container">
+        <div class="top-part">
+            <div>
+                <h2 class="name">Krzysztof Babicki</h1>
+                <p class="profile-description">Jestem świeżo upieczonym inżynierem Automatyki i Robotyki na Akademii Górniczo
+                    Hutniczej im. Stanisława Staszica w Krakowie. Obszary moich zainteresowań związane
+                    są zastosowaniem rozwiązań AI w branży audio.</p>
+            </div>
+            <div>
+                <img class="photo" src="photo.png" alt="photo" width="140px" height="150px">
+            </div>
+        </div>
+        <div class="main-part">
+            <div class="main-left">
+                <div class="section">
+                    <h3 class="section-label">Kontakt</h2>
+                    <div class="contact-item">
+                        <img class="contact-icon" src="svg/mail.svg" alt="mail-icon">
+                        <address class="contact-text">
+                            <a href="mailto:krzysiek_bab@wp.pl">krzysiek_bab@wp.pl</a>
+                        </address>
+                    </div>
+                    <div class="contact-item">
+                        <img class="contact-icon" src="svg/phone.svg" alt="mail-icon">
+                        <a class="contact-text">+48 516848837</div>
+                    </div>
+                    <div class="contact-item">
+                        <img class="contact-icon" src="svg/location.svg" alt="mail-icon">
+                        <div class="contact-text">Słoneczna 7a, 34-300 Żywiec</div>
+                    </div>
+                    <div class="contact-item">
+                        <img class="contact-icon" src="svg/github.svg" alt="mail-icon">
+                        <div class="contact-text">@krzysiekbab</div>
+                    </div>
+                    <div class="contact-item">
+                        <img class="contact-icon" src="svg/linkedin.svg" alt="mail-icon">
+                        <div class="contact-text">Krzysztof Babicki</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right"></div>
+        </div>
+        <button id="downloadCV" onclick="generatePDF()">Download pdf</button>
+    </div>
+</body>
+</html>
