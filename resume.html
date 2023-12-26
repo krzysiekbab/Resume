@@ -6,13 +6,12 @@
     <title>Krzysztof Babicki CV</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="all.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
-    <script src="html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div id="resume" class="container">
-        <div class="left-part">
+        <div id="leftPart" class="left-part">
             <div class="profileText">
                 <div class="imgBox">
                     <img src="photo.png" alt="My Picture">
@@ -44,11 +43,26 @@
                     </li>
                 </ul>
             </div>
-            <div class="contactInfo skills">
-                <h3 class="title">Umiejętności</h3>
+            <div class="contactInfo education">
+                <h3 class="title">Edukacja</h3>
                 <ul>
                     <li>
-                        <span class="text">krzysiek_bab@wp.pl</span>
+                        <h5>10/2019 - 02/2023</h5>
+                        <h4>Inżynier Automatyki i Robotyki</h4>
+                        <h4>Akademia Górniczo-Hutnicza w Krakowie</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactInfo languages">
+                <h3 class="title">Języki</h3>
+                <ul>
+                    <li>
+                        <span class="text">Angielski:</span>
+                        <span class="level">C1</span>
+                    </li>
+                    <li>
+                        <span class="text">Polski:</span>
+                        <span class="level">Ojczysty</span>
                     </li>
                 </ul>
             </div>
@@ -56,59 +70,86 @@
                 <h3 class="title">Certyfikaty</h3>
                 <ul>
                     <li>
-                        <span class="text">krzysiek_bab@wp.pl</span>
+                        <h4 class="name">Machine Learning Specialization</h4>
+                        <h5 class="source">DeepLearning.AI</h5>
+                    </li>
+                    <li>
+                        <h4 class="name">Meta Front-End Developer Professional Certificate</h4>
+                        <h5 class="source">Meta</h5>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="right-part">
             <div class="about">
-                <h2 class="title2">Profil</h2>
+                <h3 class="title2">Profil</h2>
                 <p>
                     Inżynier Automatyki i Robotyki na Akademii Górniczo-Hutniczej im. Stanisława Staszica w Krakowie. Entuzjasta programowania, aktualnie zajmujący się głównie technologiami webowymi. Lubię rozwiązywać problemy oraz stawiać sobie nowe wyzwania, ponieważ daje mi to dużo satysfakcji i motywuje do ciągłego rozwoju.
-                    <br><br>
-                    Poza pracą bardzo pasjonuję się muzyką. W wolnym czasie gram dużo na saksofonie w różnych krakowskich zespołach. 
                 </p>
             </div>
             <div class="about experience">
-                <h2 class="title2">Doświadczenie</h2>
-                <div class="box">
-                    <div class="year_company">
-                        <h4>2019 - Present</h4>
-                        <h5>Company Name</h5>
+                <h3 class="title2">Doświadczenie</h3>
+                <div class="job">
+                    <div class="box">
+                        <div class="job-title">
+                            <h4>Junior Developer</h4>
+                            <h5>Kaseya</h5>
+                        </div>
+                        <div class="year">
+                            <h4>06/2023 - teraz</h4>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h4>Senior Developer</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="year_company">
-                        <h4>2016 - 2019</h4>
-                        <h5>Company Name</h5>
-                    </div>
-                    <div class="text">
-                        <h4>Developer</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <div>
+                        <p class="job-description">Przebudowywanie strony internetowej produktu Datto Device.</p>
+                        <div class="job-skills">
+                            <strong>Umiejętności:</strong>
+                            <span>HTML · CSS · JavaScript · Bootstrap · PHP· Git · SCSS </span>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="year_company">
-                        <h4>2013 - 2016</h4>
-                        <h5>Company Name</h5>
+                <div class="job">
+                    <div class="box">
+                        <div class="job-title">
+                            <h4>Junior Developer, Intern</h4>
+                            <h5>Kaseya</h5>
+                        </div>
+                        <div class="year">
+                            <h4>03/2023 - 05/2023</h4>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h4>Junior Developer</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <div>
+                        <p class="job-description">Rozwijanie projektu stażowego <i>"Dropbox Clone".</i><br>Projekt miał na celu lepsze poznanie używanego w firmie frameworku Symfonu, systemu zarządzania plikami ZFS, obsługi baz danych oraz witualizację.</p>
+                        <div class="job-skills">
+                            <strong>Umiejętności:</strong>
+                            <span>PHP · Symfony · MySQL · Docker · Ubuntu · Git · GitLab · Virtual Machines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="box">
+                        <div class="job-title">
+                            <h4>QA enginner, intern</h4>
+                            <h5>ABB</h5>
+                        </div>
+                        <div class="year">
+                            <h4>07/2022 - 09/2022</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="job-description">Wykonywanie testów manualnych w ramach rozwoju aplikacji webowej do obsługi inteligentnych budynków.</p>
+                        <div class="job-skills">
+                            <strong>Umiejętności:</strong>
+                            <span>Testy Manualne · Git · WSL · Agile · Azure DevOps</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="about skills">
-                <h2 class="title2">Umiejętności</h2>
+                <h3 class="title2">Umiejętności</h2>
                 <div class="box">
                     <h4>Html</h4>
                     <div class="percent">
-                        <div style="width: 85%;"></div>
+                        <div style="width: 75%;"></div>
                     </div>
                 </div>
                 <div class="box">
@@ -120,7 +161,7 @@
                 <div class="box">
                     <h4>Javascript</h4>
                     <div class="percent">
-                        <div style="width: 75%;"></div>
+                        <div style="width: 60%;"></div>
                     </div>
                 </div>
                 <div class="box">
@@ -136,8 +177,8 @@
                     </div>
                 </div>
             </div>
-            <div class="about interests">
-                <h2 class="title2">Zainteresowania</h2>
+            <div id="myInterests" class="about interests">
+                <h3 class="title2">Zainteresowania</h2>
                 <ul>
                     <li>
                         <span class="icon"><i class="fa-solid fa-music"></i></span>
@@ -155,53 +196,7 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <!-- <div id="resume" class="container">
-        <div class="top-part">
-            <div>
-                <h2 class="name">Krzysztof Babicki</h1>
-                <p class="profile-description">Jestem świeżo upieczonym inżynierem Automatyki i Robotyki na Akademii Górniczo
-                    Hutniczej im. Stanisława Staszica w Krakowie. Obszary moich zainteresowań związane
-                    są zastosowaniem rozwiązań AI w branży audio.</p>
-            </div>
-            <div>
-                <img class="photo" src="photo.png" alt="photo" width="140px" height="150px">
-            </div>
-        </div>
-        <div class="main-part">
-            <div class="main-left">
-                <div class="section">
-                    <h3 class="section-label">Kontakt</h2>
-                    <div class="contact-item">
-                        <img class="contact-icon" src="svg/mail.svg" alt="mail-icon">
-                        <address class="contact-text">
-                            <a href="mailto:krzysiek_bab@wp.pl">krzysiek_bab@wp.pl</a>
-                        </address>
-                    </div>
-                    <div class="contact-item">
-                        <img class="contact-icon" src="svg/phone.svg" alt="mail-icon">
-                        <a class="contact-text">+48 516848837</div>
-                    </div>
-                    <div class="contact-item">
-                        <img class="contact-icon" src="svg/location.svg" alt="mail-icon">
-                        <div class="contact-text">Słoneczna 7a, 34-300 Żywiec</div>
-                    </div>
-                    <div class="contact-item">
-                        <img class="contact-icon" src="svg/github.svg" alt="mail-icon">
-                        <div class="contact-text">@krzysiekbab</div>
-                    </div>
-                    <div class="contact-item">
-                        <img class="contact-icon" src="svg/linkedin.svg" alt="mail-icon">
-                        <div class="contact-text">Krzysztof Babicki</div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-right"></div>
-        </div>
-        <button id="downloadCV" onclick="generatePDF()">Download pdf</button>
-    </div> -->
+    <!-- TODO: Enable downloading functionality -->
+    <!-- <button id="downloadCV" onclick="generatePDF()">Download pdf</button> -->
 </body>
 </html>
